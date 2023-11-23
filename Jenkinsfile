@@ -10,17 +10,15 @@ pipeline {
         
         stage('Installation de Behat') {
             steps {
-                // Ajoutez des étapes pour installer Behat sur votre machine XAMPP
-                // Cela peut inclure l'installation de dépendances, de composer si nécessaire, etc.
-                echo 'Installation de Behat ici'
+                // Utilisation de Git Bash pour l'installation de Behat
+                bat 'git-bash.exe -c "votre_commande_pour_installer_behat"'
             }
         }
 
         stage('Exécution des tests Behat') {
             steps {
-                dir('C:\\xampp\\htdocs\\ProjetPHP\\TestBehat') {
-                    sh 'behat'
-                }
+                // Utilisation de Git Bash pour exécuter les tests Behat
+                bat 'git-bash.exe -c "cd C:\\xampp\\htdocs\\ProjetPHP\\TestBehat && behat"'
             }
         }
     }
