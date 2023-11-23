@@ -8,12 +8,6 @@ pipeline {
             }
         }
         
-        stage('Installation de Behat') {
-            steps {
-                // Utilisation de Git Bash pour l'installation de Behat
-                bat 'git-bash.exe -c "votre_commande_pour_installer_behat"'
-            }
-        }
 
         stage('Exécution des tests Behat') {
             steps {
