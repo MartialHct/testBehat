@@ -5,7 +5,7 @@ pipeline {
         stage('Clonage du code') {
             steps {
                 // Cloner le code depuis votre référentiel Git (GitHub, par exemple)
-                git branch: 'main', credentialsId: 'votre-identifiant-credentials', url: 'https://github.com/votre-utilisateur/votre-projet.git'
+                git branch: 'main', url: 'https://github.com/votre-utilisateur/votre-projet.git'
             }
         }
         
