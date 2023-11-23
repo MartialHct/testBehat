@@ -19,7 +19,7 @@ pipeline {
         stage('Exécution des tests Behat') {
             steps {
                 // Se déplacer vers le répertoire du projet
-                dir('C:\xampp\htdocs\ProjetPHP\TestBehat') {
+                dir('C:\\xampp\\htdocs\\ProjetPHP\\TestBehat') {
                     // Exécuter les tests Behat
                     sh 'behat'
                 }
