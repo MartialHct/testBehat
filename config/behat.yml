@@ -1,0 +1,9 @@
+default:
+    suites:
+        default:
+            paths:
+                - %paths.base%/features
+    extensions:
+        Behat\MinkExtension:
+            base_url: "http://localhost/ProjetPHP/TestBehat/"
+            goutte: ~

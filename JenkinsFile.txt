@@ -1,0 +1,29 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clonage du code') {
+            steps {
+                // Cloner le code depuis votre référentiel Git (GitHub, par exemple)
+                git branch: 'main', credentialsId: 'votre-identifiant-credentials', url: 'https://github.com/votre-utilisateur/votre-projet.git'
+            }
+        }
+        
+        stage('Installation de Behat') {
+            steps {
+                // Ajouter des étapes pour installer Behat sur votre machine XAMPP
+                // Cela peut inclure l'installation de dépendances, de composer si nécessaire, etc.
+            }
+        }
+
+        stage('Exécution des tests Behat') {
+            steps {
+                // Se déplacer vers le répertoire du projet
+                dir('xampp/htdocs/votre-projet') {
+                    // Exécuter les tests Behat
+                    sh 'behat'
+                }
+            }
+        }
+    }
+}
