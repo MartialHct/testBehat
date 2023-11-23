@@ -9,11 +9,12 @@ pipeline {
         }
         
 
-        stage('Exécution des tests Behat') {
-            steps {
+       stage('Exécution des tests Behat') {
+    steps {
         dir('C:\\xampp\\htdocs\\ProjetPHP\\TestBehat') {
             bat 'behat' // Exécute directement la commande behat sans Git Bash
         }
-        }
+    }
+}
     }
 }
