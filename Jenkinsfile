@@ -11,9 +11,9 @@ pipeline {
 
         stage('Exécution des tests Behat') {
             steps {
-                // Utilisation de Git Bash pour exécuter les tests Behat
-                bat 'git-bash.exe -c "cd C:\\xampp\\htdocs\\ProjetPHP\\TestBehat && behat"'
-            }
+        dir('C:\\xampp\\htdocs\\ProjetPHP\\TestBehat') {
+            bat 'behat' // Exécute directement la commande behat sans Git Bash
+        }
         }
     }
 }
